@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  controledegastos:
+    image: ${DOCKER_REGISTRY-}controledegastos
+    build:
+      context: .
+      dockerfile: ControleDeGastos/Dockerfile
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+     
+  api.db:
+    image: postgres:alpine3.15
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=api.db
+    volumes:
+      - ./.containers/api.bd:/var/lib/postgresql/data
+    ports:
+      - 5432:5432  
+        
+
+
+
+
+
+
