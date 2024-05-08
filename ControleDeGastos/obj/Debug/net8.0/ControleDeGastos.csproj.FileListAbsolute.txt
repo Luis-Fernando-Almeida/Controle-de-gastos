@@ -35,3 +35,4 @@ C:\Users\Luis pc\source\repos\ControleDeGastos\ControleDeGastos\obj\Debug\net8.0
 C:\Users\Luis pc\source\repos\ControleDeGastos\ControleDeGastos\obj\Debug\net8.0\ControleDeGastos.pdb
 C:\Users\Luis pc\source\repos\ControleDeGastos\ControleDeGastos\obj\Debug\net8.0\ControleDeGastos.genruntimeconfig.cache
 C:\Users\Luis pc\source\repos\ControleDeGastos\ControleDeGastos\obj\Debug\net8.0\ref\ControleDeGastos.dll
+C:\Users\Luis pc\source\repos\ControleDeGastos\ControleDeGastos\obj\Debug\net8.0\ControleDeGastos.sourcelink.json

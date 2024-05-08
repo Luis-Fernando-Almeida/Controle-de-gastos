@@ -12,7 +12,7 @@ namespace ControleDeGastos.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private long Id { get; set; }
+        private long? Id { get; set; }
         private decimal Amount { get; set; }
 
         private Type Type { get; set; }

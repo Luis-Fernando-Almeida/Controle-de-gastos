@@ -1,6 +1,9 @@
 ﻿namespace ControleDeGastos.DTOs
 {
-    public class TransactionDto
+    public record TransactionDto
     {
+        public long Id { get; set; }
+        public decimal Amount { get; set; }
+        public required Type Type { get; init; }
     }
 }

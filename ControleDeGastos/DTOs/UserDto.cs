@@ -1,10 +1,10 @@
 ﻿namespace ControleDeGastos.DTOs
 {
-    public class UserDto
+    public record UserDto
     {
         public long Id { get; set; }
-        public required string Name { get; set; }
-        public required string Email { get; set; }
-        public decimal balance { get; set; }
+        public required string Name { get; init; }
+        public required string Email { get;init; }
+        public decimal Balance { get; set; }
     }
 }
