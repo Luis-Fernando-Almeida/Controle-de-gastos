@@ -8,7 +8,6 @@ namespace ControleDeGastos.Controllers
     [Route("users")]
     public class UserController : ControllerBase
     {
-
         private readonly IUserRepository _userRepository;
 
         public UserController(IUserRepository userRepository)
@@ -22,12 +21,14 @@ namespace ControleDeGastos.Controllers
             {
                 return BadRequest("Os dados do usuário não podem ser nulos.");
             }
+            User user = new User(newUser.Name, newUser.Email, newUser.Password, newUser.Balance);
             _userRepository.Add(newUser);
             return Ok();
         }
         [HttpGet]
         public IActionResult Get()
         {
+
             var user = _userRepository.Get();
             return Ok(user);
         }
