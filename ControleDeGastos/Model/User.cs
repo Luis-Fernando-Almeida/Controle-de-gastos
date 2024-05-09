@@ -6,15 +6,10 @@ namespace ControleDeGastos.Models
 {
     public class User
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public decimal Balance { get; set; }
-
-
 
         public User(string name, string email, string password, decimal balance)
         {            
@@ -24,15 +19,5 @@ namespace ControleDeGastos.Models
             Balance = balance;
         }
 
-        public override bool Equals(object? obj)
-        {
-            return obj is User user &&
-                   Id == user.Id;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
     }
 }

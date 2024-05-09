@@ -1,6 +1,7 @@
 using ControleDeGastos.Infra;
 using ControleDeGastos.Repository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,12 @@ builder.Services.AddTransient<IUserRepository, UserRepository>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(
     options => options.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
+
+builder.Services.AddDbContext<ApplicationDbContext>(
+    config =>
+{
+    config.UseNpgsql(builder.Configuration.GetConnectionString("Database"));
+});
 
 var app = builder.Build();
 

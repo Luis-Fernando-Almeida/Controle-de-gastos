@@ -10,19 +10,12 @@ namespace ControleDeGastos.Models
     }
     public class Transaction
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private long? Id { get; set; }
         private decimal Amount { get; set; }
-
         private Type Type { get; set; }
-
         private DateTime DateTime { get; set; }
 
-
-        public Transaction(long id, decimal amount, Type type, DateTime dateTime)
+        public Transaction(decimal amount, Type type, DateTime dateTime)
         {
-            Id = id;
             Amount = amount;
             Type = type;
             DateTime = dateTime;

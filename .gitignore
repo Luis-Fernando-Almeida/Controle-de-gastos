@@ -4,6 +4,10 @@
 
 /.vs
 /.containers/api.bd
-/bin/Debug
+ControleDeGastos/bin/Debug
 /obj/Debug
 /ControleDeGastos/obj
+ControleDeGastos/bin
+/obj
+/bin
+

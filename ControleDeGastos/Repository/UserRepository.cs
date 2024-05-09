@@ -5,7 +5,6 @@ namespace ControleDeGastos.Repository
 {
     public class UserRepository : IUserRepository
     {
-
         private readonly ApplicationDbContext _context = new ApplicationDbContext();
         public void Add(User user)
         {
