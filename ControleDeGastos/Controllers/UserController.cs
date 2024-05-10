@@ -21,7 +21,6 @@ namespace ControleDeGastos.Controllers
             {
                 return BadRequest("Os dados do usuário não podem ser nulos.");
             }
-            User user = new User(newUser.Name, newUser.Email, newUser.Password, newUser.Balance);
             _userRepository.Add(newUser);
             return Ok();
         }

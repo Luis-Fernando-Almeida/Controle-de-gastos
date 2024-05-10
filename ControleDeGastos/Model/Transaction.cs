@@ -9,17 +9,12 @@ namespace ControleDeGastos.Models
         Credit, Debit, Pix
     }
     public class Transaction
-    {
-        private decimal Amount { get; set; }
-        private Type Type { get; set; }
-        private DateTime DateTime { get; set; }
-
-        public Transaction(decimal amount, Type type, DateTime dateTime)
-        {
-            Amount = amount;
-            Type = type;
-            DateTime = dateTime;
-        }
+    {        
+        [Key]
+        public long id { get; set; }
+        public decimal Amount { get; set; }
+        public Type Type { get; set; }
+        public DateTime DateTime { get; set; }
 
     
     }

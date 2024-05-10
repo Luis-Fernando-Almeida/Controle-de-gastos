@@ -18,12 +18,6 @@ builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddDbContext<ApplicationDbContext>(
     options => options.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
 
-builder.Services.AddDbContext<ApplicationDbContext>(
-    config =>
-{
-    config.UseNpgsql(builder.Configuration.GetConnectionString("Database"));
-});
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
